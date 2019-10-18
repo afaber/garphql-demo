@@ -1,0 +1,15 @@
+type House{
+    id: ID!,
+    size: String,
+    color: String,
+    numberOfDoors: String
+}
+
+type Query{
+    houses(count: Int):[House]
+    house(id:ID):House
+}
+
+type Mutation{
+    buildHouse(size: String!, color: String!, numberOfDoors: String):House
+}
